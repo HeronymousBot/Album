@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_choose_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edit_text_file_name"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="18dp"
+        android:text="Choose File" />
+
+    <EditText
+        android:id="@+id/edit_text_file_name"
+        android:layout_width="229dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="18dp"
+        android:hint="Enter file name" />
+
+    <ImageView
+        android:id="@+id/image_to_be_uploaded"
+        android:layout_width="358dp"
+        android:layout_height="287dp"
+        android:layout_above="@id/progress_bar"
+        android:layout_below="@id/edit_text_file_name"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="24dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="100dp" />
+
+    <Button
+        android:id="@+id/upload_file_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="121dp"
+        android:layout_marginLeft="121dp"
+        android:layout_marginBottom="14dp"
+        android:gravity="center"
+        android:text="Upload" />
+
+    <TextView
+        android:id="@+id/show_uploads_text_view"
+        android:layout_width="108dp"
+        android:layout_height="33dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="19dp"
+        android:text="Show uploads" />
+
+</RelativeLayout>
