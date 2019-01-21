@@ -34,15 +34,17 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
         Upload currentUpload = mUploads.get(position);
         holder.imageNameTextView.setText(currentUpload.getmName());
+
         Picasso.get()
-                .load( currentUpload.getmImageUrl())
+                .load(currentUpload.getmImageUrl())
                 .fit()
+                .centerCrop()
                 .into(holder.imageDisplayed);
     }
 
     @Override
-    public int getItemCount() {
-        return mUploads.size() > 1 ? mUploads.size() : 0;
+    public int getItemCount(){
+        return mUploads.size();
     }
 
     public class ImageViewHolder extends RecyclerView.ViewHolder{

@@ -32,6 +32,7 @@ public class ImagesActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+
         mUploads =  new ArrayList<>();
 
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("uploads");
@@ -43,7 +44,7 @@ public class ImagesActivity extends AppCompatActivity {
                     mUploads.add(upload);
                 }
 
-                mImageAdapter = new ImageAdapter(getApplicationContext(), mUploads);
+                mImageAdapter = new ImageAdapter(ImagesActivity.this, mUploads);
                 mRecyclerView.setAdapter(mImageAdapter);
             }
 
