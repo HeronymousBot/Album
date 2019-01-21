@@ -1,8 +1,11 @@
 package com.example.heronymousbot.album;
 
+import com.google.firebase.database.Exclude;
+
 public class Upload {
     private String mName;
     private String mImageUrl;
+    private String mKey;
 
     public Upload(){
 
@@ -30,5 +33,15 @@ public class Upload {
 
     public void setmImageUrl(String mImageUrl) {
         this.mImageUrl = mImageUrl;
+    }
+
+    @Exclude
+    public String getmKey() {
+        return mKey;
+    }
+
+    @Exclude
+    public void setmKey(String mKey) {
+        this.mKey = mKey;
     }
 }
